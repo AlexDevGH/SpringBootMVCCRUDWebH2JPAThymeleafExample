@@ -1,5 +1,6 @@
 # SpringBootMVCCRUDWebH2JPAThymeleafExample
-Esempio di progetto Java Spring Boot MVC CRUD  con H2, Web, JPA, Thymelaf.  
+
+# Esempio di progetto Java Spring Boot MVC CRUD  con H2, Web, JPA, Thymelaf.  
 
 Clona il progetto in Spring Tool Suite
 
@@ -16,7 +17,7 @@ Divertiti e impara !
 
 
 
-Example of CRUD Java Spring Boot project involving H2, Web, JPA, Thymelaf
+# Example of CRUD Java Spring Boot project involving H2, Web, JPA, Thymelaf
 
 Clone the project in Spring Tool Suite
 
