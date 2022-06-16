@@ -1,4 +1,4 @@
-# SpringBootMVCCRUDWebH2JPAThymeleafExample
+SpringBootMVCCRUDWebH2JPAThymeleafExample
 
 # Esempio di progetto Java Spring Boot MVC CRUD  con H2, Web, JPA, Thymelaf.  
 
