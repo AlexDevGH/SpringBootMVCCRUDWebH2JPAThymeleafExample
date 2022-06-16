@@ -20,7 +20,7 @@ Example of CRUD Java Spring Boot project involving H2, Web, JPA, Thymelaf
 
 Clone the project in Spring Tool Suite
 
-Launch the project with Spring Boot
+Launch the Spring Boot project 
 
 navigate to localhost:8080/fatture
 
