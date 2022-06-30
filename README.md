@@ -12,6 +12,8 @@ Crea, vedi, modifica e cancella le fatture !
 
 Verifica il codice per modificarlo a tuo piacimento. 
 
+Puoi anche esportare in PDF o in CSV 
+
 Divertiti e impara !
 
 
@@ -29,6 +31,7 @@ USe the CRUD operations with invoices (fatture)
 
 Verify e modify the code inside as you want. 
 
+You can export in PDF or CSV too 
 
 Learn and Be happy !
 
