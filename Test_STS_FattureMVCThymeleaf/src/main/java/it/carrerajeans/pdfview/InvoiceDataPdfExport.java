@@ -32,7 +32,7 @@ public class InvoiceDataPdfExport extends AbstractPdfView {
 			HttpServletRequest request, HttpServletResponse response) throws Exception {		
 		   		
 	   //download PDF with a given filename
-       response.addHeader("Content-Disposition", "attachment;filename=Invoices.pdf");
+       response.addHeader("Content-Disposition", "attachment;filename=fatture.pdf");
 
        //read data from controller
        @SuppressWarnings("unchecked")
@@ -40,7 +40,7 @@ public class InvoiceDataPdfExport extends AbstractPdfView {
 
        //create element
        Font titleFont = new Font(Font.TIMES_ROMAN, 24, Font.BOLD, Color.blue);
-       Paragraph title = new Paragraph("ALL INVOICES DATA", titleFont);
+       Paragraph title = new Paragraph("ELENCO FATTURE ", titleFont);
        title.setAlignment(Element.ALIGN_CENTER);
        title.setSpacingBefore(20.0f);
        title.setSpacingAfter(25.0f);
@@ -68,7 +68,7 @@ public class InvoiceDataPdfExport extends AbstractPdfView {
     protected void buildPdfMetadata(Map<String, Object> model, Document document, HttpServletRequest request)
     {
        Font headerFont = new Font(Font.TIMES_ROMAN, 20, Font.BOLD, Color.magenta);
-       HeaderFooter header = new HeaderFooter(new Phrase("All Invoices PDF View", headerFont), false);
+       HeaderFooter header = new HeaderFooter(new Phrase("PDF dell'elenco Fatture", headerFont), false);
        header.setAlignment(Element.ALIGN_CENTER);
        document.setHeader(header);
 

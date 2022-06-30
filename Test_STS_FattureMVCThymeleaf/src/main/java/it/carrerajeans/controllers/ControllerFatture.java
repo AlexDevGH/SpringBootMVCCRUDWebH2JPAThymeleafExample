@@ -3,7 +3,11 @@ package it.carrerajeans.controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +17,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.opencsv.CSVWriter;
+import com.opencsv.bean.StatefulBeanToCsv;
+import com.opencsv.bean.StatefulBeanToCsvBuilder;
 
 import it.carrerajeans.entities.Fattura;
 import it.carrerajeans.excp.FatturaNonTrovataException;
@@ -108,4 +116,22 @@ public class ControllerFatture {
 		
 	}
 
+	
+	@GetMapping("/csv")
+	public void esporta2CSV(HttpServletResponse response)  throws Exception {
+		
+		String nomeFile = "Fatture.csv";
+		
+		response.setContentType("text/csv");
+		response.setHeader(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + nomeFile +"\"");
+		
+		@SuppressWarnings({ "rawtypes", "unchecked" })
+		StatefulBeanToCsv<Fattura> writer = new StatefulBeanToCsvBuilder(response.getWriter())
+                .withQuotechar(CSVWriter.NO_QUOTE_CHARACTER)
+                .withSeparator(';')
+                .withOrderedResults(false).build();
+		
+		writer.write(ifs.getAllFatture());
+		
+	}
 }
